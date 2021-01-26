@@ -1,0 +1,101 @@
+@charset 'UTF-8';
+
+.notification {
+
+    &__list {
+        top: 56px;
+        right: 0;
+        left: unset;
+        display: block;
+        min-width: 290px;
+        margin: 0;
+        padding: 0 0 10px 0;
+        border: none;
+        border-radius: 4px;
+        background-color: #fff;
+        box-shadow: $box-shadow;
+        overflow: hidden;
+        transform: translateY(-150%);
+        transition: transform .5s ease-out;
+
+        &.show {
+            transform: translateY(0);
+        }
+    }
+    &__header {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100px;
+        background: $bg-grad;
+        color: #fff;
+
+        &:before {
+            position: absolute;
+            content: '';
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+            background-color: $bg-dark-color;
+            z-index: -1;
+        }
+    }
+    &__icon {
+        display: block;
+        width: 30px;
+        height: auto;
+        margin-right: 20px;
+        fill: $link-navbar-color;
+        transition: fill .5s ease;
+
+        &.btn__svg {
+            width: 25px;
+            height: 25px;
+            margin: 0;
+        }
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        font-size: .85rem;
+        font-weight: 600;
+        color: $title-font-color;
+
+        &--all {
+            font-size: .9rem;
+        }
+        &:hover {
+
+            .notification__icon {
+                fill: $link-color-hover;
+            }
+            .notification__meta {
+                color: $link-color-hover;
+            }
+        }
+    }
+    &__body {
+        display: flex;
+        flex-direction: column;
+    }
+    &__meta {
+        color: $meta-font-color;
+        font-size: .7rem;
+        font-weight: 500;
+        transition: color .5s ease;
+    }
+}
+
+@media (min-width: 1200px) {
+    
+    .notification__list {
+        min-width: 300px;
+        max-width: 400px;
+    }
+}

@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+.btn {
+	min-width: 128px;
+
+	&:focus,
+	&:active {
+		outline: none;
+		box-shadow: none;
+	}
+	&__group {
+		display: flex;
+		justify-content: space-around;
+
+		.btn:not(:first-child) {
+			margin-left: 10px;
+		}
+	}
+	&__grad-pr {
+		background: $btn__grad-pr;
+
+		&:active {
+			background-color: $pr-color;
+		}
+	}
+	&__grad-sec {
+		background: $btn__grad-sec;
+
+		&:active {
+			background-color: $sec-color;
+		}
+	}
+	&__grad-success {
+		background: $btn__grad-success;
+
+		&:active {
+			background-color: $success-color;
+		}
+	}
+	&__grad-info {
+		background: $btn__grad-info;
+
+		&:active {
+			background-color: $info-color;
+		}
+	}
+	&__grad-danger {
+		background: $btn__grad-danger;
+
+		&:active {
+			background-color: $danger-color;
+		}
+	}
+	&__gradient {
+		color: #fff;
+		font-weight: 600;
+		padding: 12px 20px;
+		border: 0 none;
+		background-size: 200% auto;
+		transition: 0.5s;
+
+		&:hover {
+			background-position: right center;
+			color: #fff;
+		}
+		&:active {
+			background-image: none;
+		}
+	}
+	&__svg {
+		fill: $link-navbar-color;
+		width: 25px;
+		height: 25px;
+	}
+}
+
+.td-actions {
+	&__link {
+		&:not(:first-child) {
+			margin-left: 5px;
+		}
+		i {
+			background: transparent;
+			color: rgba(52, 40, 104, 0.4);
+			font-size: 1.6rem;
+			padding: 0.5rem;
+			border-radius: 50%;
+			transition: all 0.4s ease;
+			cursor: pointer;
+
+			&.edit:hover {
+				background: $pr-color;
+				color: #fff;
+			}
+			&.delete:hover {
+				background: $danger-color;
+				color: #fff;
+			}
+		}
+	}
+}
+
+@media (min-width: 576px) {
+	.btn {
+		&__group {
+			justify-content: flex-end;
+		}
+	}
+}

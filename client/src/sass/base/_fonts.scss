@@ -1,0 +1,45 @@
+@charset 'UTF-8';
+
+@font-face {
+		font-family: "Arimo";
+		font-display: swap;
+		src: url("../fonts/arimo/arimoregular.eot");
+		src: url("../fonts/arimo/arimoregular.eot?#iefix")format("embedded-opentype"),
+		url("../fonts/arimo/arimoregular.woff") format("woff"),
+		url("../fonts/arimo/arimoregular.ttf") format("truetype");
+		font-style: normal;
+		font-weight: 400;
+}
+
+@font-face {
+		font-family: "Arimo";
+		font-display: swap;
+		src: url("../fonts/arimo/arimobold.eot");
+		src: url("../fonts/arimo/arimobold.eot?#iefix")format("embedded-opentype"),
+		url("../fonts/arimo/arimobold.woff") format("woff"),
+		url("../fonts/arimo/arimobold.ttf") format("truetype");
+		font-style: normal;
+		font-weight: 700;
+}
+
+@font-face {
+		font-family: "PlayfairDisplay";
+		font-display: swap;
+		src: url("../fonts/playfairdisplay/playfairdisplayregular.eot");
+		src: url("../fonts/playfairdisplay/playfairdisplayregular.eot?#iefix")format("embedded-opentype"),
+		url("../fonts/playfairdisplay/playfairdisplayregular.woff") format("woff"),
+		url("../fonts/playfairdisplay/playfairdisplayregular.ttf") format("truetype");
+		font-style: normal;
+		font-weight: 400;
+}
+
+@font-face {
+		font-family: "PlayfairDisplay";
+		font-display: swap;
+		src: url("../fonts/playfairdisplay/playfairdisplaybold.eot");
+		src: url("../fonts/playfairdisplay/playfairdisplaybold.eot?#iefix")format("embedded-opentype"),
+		url("../fonts/playfairdisplay/playfairdisplaybold.woff") format("woff"),
+		url("../fonts/playfairdisplay/playfairdisplaybold.ttf") format("truetype");
+		font-style: normal;
+		font-weight: 700;
+}

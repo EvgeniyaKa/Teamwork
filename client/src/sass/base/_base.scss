@@ -1,0 +1,24 @@
+@charset 'UTF-8';
+
+*,
+input,
+button {
+
+    &:focus {
+        outline: none;
+    }
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $bg-color;
+}
+
+hr,
+.dropdown-divider {
+    border-top-color: $meta-font-color;
+}

@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+.navbar {
+    background: #fff;
+    padding: 0 15px;
+    color: $link-navbar-color;
+    border-radius: 0;
+    box-shadow: 0 1px 15px 1px rgba(52,40,104,.08);
+    z-index: 1000;
+    width: 100%;
+    height: $nav-h;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        vertical-align: middle;
+        width: 100%;
+    }
+    &__header {
+        display: flex;
+        align-items: center;
+    }
+    &__toggler {
+        min-width: unset;
+        height: 44px;
+        margin-right: auto;
+        padding: 10px 0;
+
+        span {
+            background: $link-navbar-color;
+            width: 20px;
+            height: 2px;
+            display: block;
+            margin: 7px 0;
+            border-radius: 35px;
+            transition: all 0.3s cubic-bezier(.81,-.33,.345,1.375);
+
+            &:first-of-type {
+                margin-top: 0;
+                transform: translateY(17px);
+                transition: all 0.6s;
+            }
+            &:nth-of-type(2) {
+                position: relative;
+                width: 30px;
+                transform: none;
+            }
+            &:last-of-type {
+                position: relative;
+                width: 15px;
+                margin-top: 0;
+                transform: translateY(-17px);
+                transition: all 0.3s;
+            }
+        }
+        &.active {
+
+            span {
+    
+                &:first-of-type {
+                    transform: none;
+                }
+                &:nth-of-type(2) {
+                    transform: rotateY(180deg);
+                }
+                &:last-of-type {
+                    transform: none;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .navbar {
+
+        &__toggler {
+
+            span {
+                &:first-of-type {
+                    transform: translateX(10px);
+                }
+                &:last-of-type {
+                    transform: translateX(15px);
+                }
+            }
+        }
+    }
+}

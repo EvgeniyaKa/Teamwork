@@ -1,0 +1,228 @@
+@charset "UTF-8";
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.side-navbar::-webkit-scrollbar {
+	display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.side-navbar {
+	-ms-overflow-style: none;
+	/* IE and Edge */
+	scrollbar-width: none;
+	/* Firefox */
+}
+
+.side-navbar {
+	position: relative;
+	display: block;
+	min-width: 110px;
+	max-width: 110px;
+	height: 100%;
+	margin-left: 0;
+	padding: 80px 0;
+	color: #fff;
+	overflow-y: auto;
+	z-index: 999;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+
+	&.shrink {
+		margin-left: -110px;
+		text-align: center;
+	}
+	&__list {
+		list-style-type: none;
+		padding: 10px 0;
+	}
+	&__item {
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+	&__link {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		margin-bottom: 15px;
+		padding: 10px 0;
+		color: $link-navbar-color;
+		text-align: center;
+
+		&:hover {
+			color: $link-color-hover;
+
+			.side-navbar__icon {
+				fill: $link-color-hover;
+			}
+		}
+		&:active {
+			color: $link-color-active;
+
+			.side-navbar__icon {
+				fill: $link-color-active;
+			}
+		}
+		&--title {
+			font-size: 0.7rem;
+		}
+	}
+	&__icon {
+		fill: $link-navbar-color;
+		-ms-flex-negative: 0;
+		flex-shrink: 0;
+		width: auto;
+		height: 23px;
+		margin-bottom: 5px;
+		-webkit-transition: fill 0.5s ease;
+		-o-transition: fill 0.5s ease;
+		transition: fill 0.5s ease;
+	}
+}
+
+.sb-dropdown {
+	margin-bottom: 0;
+	translate: margin-bottom 0.8s ease-in-out;
+
+	&__toggler {
+		position: relative;
+		cursor: pointer;
+
+		&:after {
+			position: absolute;
+			content: '\f110';
+			font-family: 'LineAwesome';
+			font-weight: bold;
+			bottom: -10px;
+			opacity: 0.6;
+			-webkit-transform: rotate(0deg);
+			-ms-transform: rotate(0deg);
+			transform: rotate(0deg);
+			-webkit-transition: -webkit-transform 0.5s ease;
+			transition: -webkit-transform 0.5s ease;
+			-o-transition: transform 0.5s ease;
+			transition: transform 0.5s ease;
+			transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+		}
+	}
+	&__menu {
+		height: 0;
+		opacity: 0;
+		visibility: hidden;
+		-webkit-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+	}
+	&__item {
+		width: 100%;
+	}
+	&__link {
+		display: block;
+		padding: 10px 0;
+		font-size: 0.7rem;
+		text-align: center;
+		color: $link-navbar-color;
+	}
+	&.open {
+		margin-bottom: 30px;
+		//background-color: darken($title-font-color, 5%);
+
+		.sb-dropdown {
+			&__toggler {
+				&:after {
+					-webkit-transform: rotate(180deg);
+					-ms-transform: rotate(180deg);
+					transform: rotate(180deg);
+				}
+			}
+			&__menu {
+				height: auto;
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.side-navbar {
+		min-width: 110px;
+		max-width: 110px;
+
+		&.shrink {
+			margin-left: 0;
+			min-width: 240px;
+			max-width: 240px;
+
+			.side-navbar {
+				&__link {
+					-webkit-box-orient: horizontal;
+					-webkit-box-direction: normal;
+					-ms-flex-direction: row;
+					flex-direction: row;
+					-webkit-box-pack: start;
+					-ms-flex-pack: start;
+					justify-content: flex-start;
+					padding: 10px 10px;
+
+					&--title {
+						width: 100%;
+						font-size: 1rem;
+						text-align: left;
+						line-height: 1;
+						-webkit-transition: all 0.3s ease;
+						-o-transition: all 0.3s ease;
+						transition: all 0.3s ease;
+					}
+				}
+				&__icon {
+					margin-right: 15px;
+				}
+			}
+		}
+	}
+
+	.page:not(.sidebar-shrink) {
+		.sb-dropdown {
+			&__toggler {
+				&:after {
+					bottom: unset;
+					right: 10px;
+					opacity: 0.6;
+					-webkit-transform: rotate(90deg);
+					-ms-transform: rotate(90deg);
+					transform: rotate(90deg);
+				}
+			}
+			&__link {
+				font-size: 0.85rem;
+				text-align: left;
+				padding-left: 40px;
+			}
+			&.open {
+				//margin-right: 20px;
+				//margin-left: 20px;
+
+				.sb-dropdown {
+					&__toggler {
+						&:after {
+							-webkit-transform: rotate(-90deg);
+							-ms-transform: rotate(-90deg);
+							transform: rotate(-90deg);
+						}
+					}
+				}
+			}
+		}
+	}
+}

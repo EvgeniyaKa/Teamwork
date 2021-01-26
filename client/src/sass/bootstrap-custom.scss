@@ -1,0 +1,35 @@
+$primary: #5d5386;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  #e4e8f0,
+  "success":    #5cb85c,
+  "info":       #5bc0de,
+  "warning":    #f0ad4e,
+  "danger":     #fe195e
+);
+
+$input-btn-padding-y:       0.625rem;
+$input-btn-padding-x:       0.625rem;
+
+$input-btn-padding-y-sm:    $input-btn-padding-y;
+$input-btn-padding-x-sm:    $input-btn-padding-x;
+
+$input-btn-padding-y-lg:    $input-btn-padding-y;
+$input-btn-padding-x-lg:    $input-btn-padding-x;
+
+$btn-padding-y:             10px;
+$btn-padding-x:             20px;
+$btn-font-size:             .85rem;
+$btn-font-weight:           600;
+$btn-line-height:           1.25;
+$btn-border-width:          2px;
+$btn-border-radius:         60px;
+$btn-transition:            all 0.2s ease-in-out;
+
+$input-height:              42px; 
+
+$table-hover-color:         $primary;
+$table-hover-bg:          rgba(52,40,104,.04);
+
+@import './bootstrap-5/_bootstrap';

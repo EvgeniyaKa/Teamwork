@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+.filter {
+    display: flex;
+    flex-wrap: wrap;
+
+    .form-control {
+        margin-bottom: 15px;
+        border: none;
+        border-radius: 21px;
+        background-color: $sec-color;
+    }
+}

@@ -1,0 +1,47 @@
+@charset 'UTF-8';
+
+//@import 'fonts';
+
+$title-font : "Noto Sans", sans-serif;
+$body-font : "Montserrat", sans-serif;
+
+$pr-color : #5d5386;
+$sec-color : #e4e8f0;
+$success-color : #5cb85c;
+$info-color : #5bc0de;
+$warning-color : #f0ad4e;
+$danger-color : #fe195e;
+$dark-color : #26272a;
+$light-grey : #898989;
+$lighter-grey : rgba(0,0,0,0.03);
+
+$title-font-color : #2c304d;
+$body-font-color : #40545a;
+$meta-font-color : #98a8b4;
+
+$btn-pr-color : $pr-color;
+$btn-pr-color-hover : darken($btn-pr-color, 20%);
+$btn-pr-color-active : lighten($btn-pr-color, 20%);
+$btn__grad-pr : linear-gradient(to right,#5d5386 0%,#5d5386 100%);
+$btn__grad-sec : linear-gradient(to right,#bc0056 0%,#730062 100%);
+$btn__grad-success : linear-gradient(to right,#41c7af 0%,#54e38e 100%);
+$btn__grad-info : linear-gradient(to right,#6859ea 0%,#6acbe0 100%);
+$btn__grad-danger : linear-gradient(to right,#e23f83 0%,#ea5844 100%);
+
+$link-color: $pr-color;
+$link-color-hover: #e76c90;
+$link-color-active: lighten($link-color, 10%);
+$link-dark-bg-color: #21bebd;
+$link-navbar-color: #aea9c3;
+
+$bg-color				: #f2f3f8;
+$bg-page-color			: #f9f9f9;
+$bg-dark-color			: #2f313d;
+$bg-grad				: linear-gradient(135deg,rgba(46,52,81,.4) 0%,rgba(52,40,104,.95) 100%);
+$bg-sidebar-color: $title-font-color;
+
+$header-h               : 70px;
+$nav-h                  : $header-h;
+$nav-bg                 : $dark-color;
+
+$box-shadow:    0 0 30px rgba(0,0,0,.15)

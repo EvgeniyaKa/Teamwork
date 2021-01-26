@@ -1,0 +1,13 @@
+@charset 'UTF-8';
+
+.sidebar {
+
+    &__default {
+        background: $bg-sidebar-color;
+        position: fixed;
+        height: 100%;
+        top: 0;
+        z-index: 999;
+        transition: all 0.2s ease;
+    }
+}

@@ -1,0 +1,11 @@
+@charset 'UTF-8';
+
+.has-shadow {
+    box-shadow: $box-shadow;
+}
+
+.separator-dashed {
+    height: 1px;
+    margin: 20px 0;
+    border-top: 1px dashed #eee;
+}

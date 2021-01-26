@@ -1,0 +1,21 @@
+@charset 'UTF-8';
+
+.notifications__link {
+    position: relative;
+
+    &:after {
+        content: none;
+    }
+}
+
+.badge-pulse {
+    position: absolute;
+    top: 5px;
+    right: 18px;
+    border: 3px solid #fff;
+    display: block;
+    width: 14px;
+    height: 14px;
+    width: 10px;
+    height: 10px;
+}

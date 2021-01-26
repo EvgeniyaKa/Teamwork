@@ -1,0 +1,35 @@
+@charset 'UTF-8';
+
+.container-fluid {
+    padding: 1rem;
+}
+
+.container-fluid.auth__page {
+    padding: 0;
+
+    >.row {
+        margin: 0;
+    }
+}
+
+.row {
+    margin-right: -1rem;
+    margin-left: -1rem;
+}
+
+.flex-row>[class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row>[class*='col-']>.widget__wrapper {
+    background-color: #fff;
+    height: 100%;
+}
+
+@media (min-width: 576px) {
+    
+    .container-fluid {
+        padding: 30px;
+    }
+}

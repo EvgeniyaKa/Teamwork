@@ -1,0 +1,27 @@
+/*
+    @package treningi4you
+*/
+
+/* 
+	Mixins
+	------------------------------------------------
+*/
+@mixin animate ( $attr, $time ){
+	-webkit-transition: $attr $time ease;
+	transition: $attr $time ease;
+}
+
+@mixin transform ( $val ){
+	-webkit-transform: $val;
+	transform: $val;
+}
+
+@-webkit-keyframes spin {
+	from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+	to { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@keyframes spin {
+	from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+	to { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}

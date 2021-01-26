@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+input,
+.form-control {
+    box-sizing: border-box;
+    height: 42px;
+
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+.form__signIn {
+
+    .form-group {
+        position: relative;
+        margin-bottom: 30px;
+        height: 42px;
+    }
+
+    .form-label {
+        position: absolute;
+        color: $pr-color;
+        font-size: 0.8125rem;
+        line-height: 1;
+        top: 50%;
+        opacity: .5;
+        transition: 0.2s ease all;
+    }
+
+    .form-control {
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid $sec-color;
+
+        &:focus {
+            border-bottom-color: $sec-color;
+        }
+    }
+
+    .form-group .bar {
+        position: relative;
+        display: block;
+        width: 100%;
+
+        &:before,
+        &:after {
+            position: absolute;
+            content: '';
+            height: 1px;
+            width: 0;
+            bottom: 1px;
+            background: $pr-color;
+            transition: 0.2s ease all;
+        }
+        &:before {
+            left: 50%;
+        }
+        &:after {
+            right: 50%;
+        }
+    }
+
+    .form-control:focus ~ .bar:before,
+    .form-control:focus ~ .bar:after {
+        width: 50%;
+    }
+
+    .form-control:focus ~ .form-label {
+        top: -5px;
+        font-size: 0.625rem;
+        opacity: 1;
+    }
+
+    .form-control:not([value=""]) ~ .form-label {
+        top: -5px;
+        font-size: 0.625rem;
+        opacity: 1;
+    }
+}

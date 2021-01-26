@@ -1,0 +1,17 @@
+.text-editor {
+	&__wrapper {
+		border: 1px solid #ced4da;
+		border-radius: 4px;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	&__toolbar {
+		border: none;
+		background-color: #f9f9f9; //$bg-page-color
+	}
+	&__editor {
+		min-height: 12rem;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+}

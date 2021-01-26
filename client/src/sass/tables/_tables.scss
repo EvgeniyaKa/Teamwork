@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+.table {
+	color: $meta-font-color;
+
+	thead {
+		background-color: rgba(52, 40, 104, 0.05);
+		border-radius: 4px;
+	}
+	tr {
+		border-bottom-color: transparent;
+	}
+	th {
+		vertical-align: middle;
+		border: 0 none;
+		padding: 20px 12px 20px 12px;
+		color: $pr-color;
+		font-weight: 600;
+	}
+	td {
+		border-top: 0;
+		padding: 0.85rem;
+		vertical-align: middle;
+		font-weight: 500;
+	}
+}
+
+.table-hover > tbody > tr:hover {
+	color: $pr-color;
+}

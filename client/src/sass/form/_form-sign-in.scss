@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+.form {
+    
+    &__signIn {
+        margin-bottom: 30px;
+    }
+    &__include {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    &-check {
+        
+        &-input {
+            border: none;
+            background-color: $sec-color;
+
+            &:checked {
+                background-color: $success-color;
+                outline: none;
+                box-shadow: none;
+            }
+            &:active,
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+        &-label {
+            color: #98a8b4;
+            font-size: 0.875rem;
+        }
+    }
+}
+
+.forgot-pass {
+    font-size: 0.875rem;
+}
+
+.btn__sign-in {
+    display: block;
+    margin: 0 auto;
+}
+
+.register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9375rem;
+}
